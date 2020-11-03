@@ -1,0 +1,25 @@
+version: "3.3"
+services:
+    db:
+        container_name: grandb
+        build: ./grandb
+        restart: always
+        environment:
+            DB_USER: admin
+            DB_NAME: grantestdb
+            DB_PASSWORD: granboard123
+            DB_HOST: granboard-db.c8hsvw07vqnk.ap-northeast-1.rds.amazonaws.com
+            SECRET_KEY_BASE: NCybl5k8tba1A/lKAPQ9OZ+oEp+sSnRsiU/PI3aC
+        ports:
+            - 3306:3306
+        volumes:
+            - mysql_data:/var/lib/mysql
+    app:
+        image: devteds/rails-api-example
+        ports:
+            - "80:3000"
+networks:
+    network:
+
+volumes:
+    db:

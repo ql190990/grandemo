@@ -1,2 +1,2 @@
-# grandemo
-Demo
+# gran-test
+Demo setting
