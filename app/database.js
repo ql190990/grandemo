@@ -2,8 +2,8 @@ const Sequelize = require('sequelize')
 
 var db = {}
 
-const sequelize = new Sequelize('graphql-db', 'root', '', {
-    host: 'localhost',
+const sequelize = new Sequelize('grantestdb', 'admin', 'granboard123', {
+    host: 'granboard-db.c8hsvw07vqnk.ap-northeast-1.rds.amazonaws.com',
     port: '3306',
     dialect: 'mysql',
     define: {
